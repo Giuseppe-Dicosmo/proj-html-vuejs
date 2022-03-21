@@ -1,0 +1,15 @@
+
+@import "@fontsource/readex-pro/index.css";
+@import "@fontsource/readex-pro/700.css";
+
+@mixin container {
+  max-width: 1628px;
+  margin: 0 auto;
+  border: 3px solid red;
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

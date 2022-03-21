@@ -20,10 +20,11 @@ export default {
 
 * {
   @include reset;
+  // font-family: "bai-jamjuree", sans-serif;
 }
 
 #app {
-  font-family: "readex-pro", Helvetica, Arial, sans-serif;
+  font-family: "bai-jamjuree", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

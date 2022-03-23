@@ -1,10 +1,10 @@
 <template>
   <div class="container-jumbotron">
     <div class="description">
-      <p>alwats the best way you need it</p>
-      <h1>the best business consulting</h1>
+      <p>{{ paragraph }}</p>
+      <h1>{{ taitol }}</h1>
       <div class="container-play">
-        <button>read more</button>
+        <button>{{ button }}</button>
         <figure class="play">
           <a href="#">
             <img src="../assets/images/play.png" alt="" />
@@ -16,7 +16,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      paragraph: "alwats the best way you need it",
+      taitol: "the best business consulting",
+      button: "read more",
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -42,16 +50,10 @@ export default {};
       @include font-size-15;
       display: block;
       letter-spacing: 3px;
-    }
 
-    p::before {
-      display: inline-block;
-      width: 55px;
-      height: 5px;
-      margin-right: 20px;
-      content: "";
-      background: $verdeAcqua;
-      border-radius: 5px;
+      &::before {
+        @include linea-text;
+      }
     }
 
     h1 {
@@ -72,13 +74,13 @@ export default {};
         border: none;
         @include font-size-15;
         text-transform: uppercase;
+        cursor: pointer;
 
-        &:hover{
+        &:hover {
           background: $rosso;
           color: $white;
         }
       }
-
 
       .play {
         width: 60px;
@@ -88,7 +90,6 @@ export default {};
         display: flex;
         align-items: center;
         justify-content: center;
-
 
         a {
           width: 16px;

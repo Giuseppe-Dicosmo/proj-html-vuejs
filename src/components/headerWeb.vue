@@ -1,5 +1,5 @@
 <template>
-  <header class="container-fuil">
+  <header class="container-fluid">
     <div class="container">
       <navBar />
       <JumboTron />
@@ -30,10 +30,9 @@ export default {
 @import "../assets/scss/style.scss";
 
 
-.container-fuil {
-  background: $violaScuro url("../assets/images/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg") no-repeat right;
-  background-size: contain 65% 100%;
-  width: 100%;
+.container-fluid {
+  background: url("../assets/images/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg") no-repeat right;
+  background-size: 65% 100%;
 
   .container {
     @include container;

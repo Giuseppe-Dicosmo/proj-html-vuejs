@@ -1,24 +1,57 @@
-
-@import "@fontsource/bai-jamjuree/index.css";
-@import "@fontsource/bai-jamjuree/700.css";
-
-@mixin container {
-  max-width: 1628px;
-  margin: 0 auto;
-  border: 1px solid red;
-}
-
-@mixin font-size-15{
-  font-size: 15px;
-}
-
 @mixin reset {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+// container
+@mixin container {
+  max-width: 1628px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+// font-size
+@import "@fontsource/bai-jamjuree/index.css";
+@import "@fontsource/bai-jamjuree/700.css";
+
+@mixin font-size-15 {
+  font-size: 15px;
+}
+
+@mixin font-size-18 {
+  font-size: 18px;
+}
+
+// botton
+
+@mixin botton-icons {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  background: $indaco;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// linea
+@mixin linea-text {
+  display: inline-block;
+  width: 55px;
+  height: 5px;
+  margin-right: 20px;
+  content: "";
+  background: $verdeAcqua;
+  border-radius: 5px;
+}
+
+// color
 $violaScuro: #1f1e38;
 $white: #ffffff;
 $verdeAcqua: #39ffbf;
-$rosso:#f81d39;
+$rosso: #f81d39;
+$grigio: #888888;
+$grigioAAAAAA: #aaaaaa;
+$indaco: #36354c;

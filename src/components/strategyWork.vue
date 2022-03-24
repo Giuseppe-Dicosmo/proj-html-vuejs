@@ -87,10 +87,7 @@ export default {};
 
           span {
             @include font-size-18;
-            display: block;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: $grigioAAAAAA;
+            @include text-top-title;
 
             &::before {
               @include linea-text;
@@ -147,14 +144,11 @@ export default {};
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 225px;
-        height: 65px;
         background: $rosso;
         color: $white;
-        @include font-size-18;
-        text-transform: uppercase;
-        cursor: pointer;
         border: none;
+        @include font-size-18;
+        @include botton;
 
         &:hover {
           background: $violaScuro;

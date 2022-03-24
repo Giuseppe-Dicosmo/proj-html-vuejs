@@ -1,7 +1,7 @@
 <template>
   <div class="container-jumbotron">
     <div class="description">
-      <p>{{ paragraph }}</p>
+      <span>{{ paragraph }}</span>
       <h1>{{ taitol }}</h1>
       <div class="container-play">
         <button>{{ button }}</button>
@@ -46,9 +46,10 @@ export default {
     color: $white;
     text-transform: uppercase;
 
-    p {
-      @include font-size-15;
-      display: block;
+    span {
+      @include font-size-18;
+      @include text-top-title;
+
       letter-spacing: 3px;
 
       &::before {

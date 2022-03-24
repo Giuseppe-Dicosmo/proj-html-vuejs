@@ -1,7 +1,9 @@
 <template>
   <nav>
     <figure>
-      <img :src="require(`../assets/images/${imgLogo}`)" alt="" />
+      <a href="https://demo.phlox.pro/consulting-2/">
+        <img :src="require(`../assets/images/${imgLogo}`)" alt="" />
+      </a>
     </figure>
     <ul>
       <li

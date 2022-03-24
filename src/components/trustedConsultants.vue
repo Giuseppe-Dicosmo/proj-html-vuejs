@@ -2,6 +2,7 @@
   <section class="container-fluid">
     <div class="container">
       <div class="container-project">
+        <!-- Sezione titolo -->
         <div class="wrapper">
           <div class="title">
             <span>project</span>
@@ -13,7 +14,7 @@
             <div class="arrows">&#8594;</div>
           </div>
         </div>
-
+        <!-- Sezione card -->
         <div class="container-slide">
           <div v-for="(card, i) in datiCard" :key="i" class="slide">
             <figure>
@@ -21,8 +22,8 @@
             </figure>
             <div class="info-hover">
               <div class="info">
-                <h3>{{card.titol}}</h3>
-                <span>{{card.text}}</span>
+                <h3>{{ card.titol }}</h3>
+                <span>{{ card.text }}</span>
               </div>
 
               <div class="botton-icon">&#43;</div>
@@ -64,7 +65,6 @@ export default {
 @import "../assets/scss/style.scss";
 
 .container-fluid {
-
   .container {
     @include container;
     height: 970px;
@@ -84,7 +84,7 @@ export default {
         justify-content: space-between;
 
         .title {
-          width: 720px;
+          width: 45%;
           // border: 1px solid greenyellow;
           height: 100%;
           display: flex;
@@ -93,10 +93,7 @@ export default {
 
           span {
             @include font-size-18;
-            display: block;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: $grigioAAAAAA;
+            @include text-top-title;
 
             &::before {
               @include linea-text;
@@ -109,6 +106,7 @@ export default {
             height: 100%;
             display: flex;
             align-items: center;
+            text-transform: uppercase;
           }
         }
 
@@ -161,8 +159,7 @@ export default {
             }
 
             .info-hover {
-              background-color: $rosso;
-              mix-blend-mode: darken;
+              background: rgba(248, 29, 57, 0.7);
               padding: 30px;
               display: flex;
               flex-wrap: wrap;
@@ -194,7 +191,6 @@ export default {
                 font-size: 30px;
 
                 &:hover {
-                  mix-blend-mode: none;
                   background: $verdeAcqua;
                 }
               }

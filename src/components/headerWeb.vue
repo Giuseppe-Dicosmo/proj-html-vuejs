@@ -19,9 +19,6 @@ export default {
     navBar,
     JumboTron
   }
-  // props: {
-  //   msg: String
-  // }
 };
 </script>
 

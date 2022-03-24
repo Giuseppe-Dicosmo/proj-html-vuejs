@@ -160,6 +160,7 @@ export default {
 
             .info-hover {
               background: rgba(248, 29, 57, 0.7);
+              // mix-blend-mode: multiply;
               padding: 30px;
               display: flex;
               flex-wrap: wrap;
@@ -167,10 +168,11 @@ export default {
               align-items: center;
               align-content: flex-end;
               position: absolute;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
+              inset: 0;
+              // top: 0;
+              // left: 0;
+              // bottom: 0;
+              // right: 0;
 
               .info {
                 h3 {

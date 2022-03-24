@@ -3,6 +3,7 @@
     <headerWeb />
     <mainWeb />
     <footerWeb />
+    <chatWeb />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import headerWeb from "./components/headerWeb.vue";
 import mainWeb from "./components/mainWeb.vue";
 import footerWeb from "./components/footerWeb.vue";
+import chatWeb from "./components/chatWeb.vue";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     headerWeb,
     mainWeb,
     footerWeb,
+    chatWeb,
   },
 };
 </script>
@@ -30,8 +33,6 @@ export default {
 
 #app {
   font-family: "bai-jamjuree", sans-serif;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background: $violaScuro;
 }

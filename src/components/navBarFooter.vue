@@ -1,58 +1,29 @@
 <template>
   <section>
-    <div  class="container">
-      <div class="container-img wrapper">
-        <figure>
+    <div class="container">
+      <!-- ciclo card -->
+      <div
+        v-for="card in datiNav"
+        :key="card.id"
+        :class="card.class"
+        class="wrapper"
+      >
+        <figure v-if="card.images">
           <img src="../assets/images/logotype-2-150x25.png" alt="" />
         </figure>
-      </div>
-      <div class="container-nav wrapper">
-        <ul>
-          <li><a href="#">lorem</a></li>
-          <li><a href="#">lorem</a></li>
-          <li><a href="#">lorem</a></li>
-          <li><a href="#">lorem</a></li>
-          <li><a href="#">lorem</a></li>
-          <li><a href="#">lorem</a></li>
-        </ul>
-      </div>
-      <div class="container-social wrapper">
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../assets/images/facebook-app-symbol.png" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../assets/images/facebook-app-symbol.png" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../assets/images/facebook-app-symbol.png" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../assets/images/facebook-app-symbol.png" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../assets/images/facebook-app-symbol.png" alt="" />
+
+        <ul v-if="card.navFooter">
+          <li v-for="(list, i) in card.navFooter" :key="i">
+            <a v-if="list.link" :href="list.href">{{ list.link }}</a>
+
+            <a v-if="list.linkIcons" :href="list.href">
+              <img :src="list.linkIcons" alt="" />
             </a>
           </li>
         </ul>
-      </div>
 
-      <div class="container-copyright">
-        <p>
-          Terms of use <br />
-          Privacy Environmental Policy
-        </p>
-
-        <p>Copyright &#169; 2020 Phlox Consulting. All Rights Reserved.</p>
+        <p v-if="card.textCopyleft">{{ card.textCopyleft }}</p>
+        <p v-if="card.textCopyright">{{ card.textCopyright }}</p>
       </div>
     </div>
   </section>
@@ -73,27 +44,27 @@ export default {
           class: "container-nav",
           navFooter: [
             {
-              text: "home",
+              link: "home",
               href: "#",
             },
             {
-              text: "about",
+              link: "about",
               href: "#",
             },
             {
-              text: "projects",
+              link: "projects",
               href: "#",
             },
             {
-              text: "services",
+              link: "services",
               href: "#",
             },
             {
-              text: "blog",
+              link: "blog",
               href: "#",
             },
             {
-              text: "contact",
+              link: "contact",
               href: "#",
             },
           ],
@@ -101,21 +72,21 @@ export default {
         {
           id: "3",
           class: "container-social",
-          navIcons: [
+          navFooter: [
             {
-              icons: require(`../assets/images/instagram.png`),
+              linkIcons: require(`../assets/images/instagram.png`),
               href: "#",
             },
             {
-              icons: require(`../assets/images/linkedin.png`),
+              linkIcons: require(`../assets/images/linkedin.png`),
               href: "#",
             },
             {
-              icons: require(`../assets/images/facebook-app-symbol.png`),
+              linkIcons: require(`../assets/images/facebook-app-symbol.png`),
               href: "#",
             },
             {
-              icons: require(`../assets/images/twitter.png`),
+              linkIcons: require(`../assets/images/twitter.png`),
               href: "#",
             },
           ],
@@ -123,16 +94,9 @@ export default {
         {
           id: "4",
           class: "container-copyright",
-          copyright: [
-            {
-              textCopyright: `Terms of use ${(
-                <br />
-              )} Privacy Environmental Policy`,
-            },
-            {
-              textCopyright: "Copyright &#169; 2020 Phlox Consulting. All Rights Reserved.",
-            },
-          ],
+          textCopyleft: `Terms of use ${(<br />)} Privacy Environmental Policy`,
+          textCopyright:
+            "Copyright © 2020 Phlox Consulting. All Rights Reserved.",
         },
       ],
     };
@@ -175,6 +139,10 @@ export default {
       color: $grigio;
       text-transform: uppercase;
       @include font-size-15;
+
+      &:hover {
+        color: $rosso;
+      }
     }
   }
 
@@ -182,13 +150,17 @@ export default {
     justify-content: flex-end;
 
     li {
-      width: 30px;
+      width: 15px;
       aspect-ratio: auto 1 / 1;
 
       a img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+        &:hover {
+          filter: invert(34%) sepia(97%) saturate(5277%) hue-rotate(339deg) brightness(94%) contrast(106%);
+        }
       }
     }
   }

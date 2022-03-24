@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container">
+    <div  class="container">
       <div class="container-img wrapper">
         <figure>
           <img src="../assets/images/logotype-2-150x25.png" alt="" />
@@ -65,10 +65,12 @@ export default {
       datiNav: [
         {
           id: "1",
+          class: "container-img",
           images: require(`../assets/images/logotype-2-150x25.png`),
         },
         {
           id: "2",
+          class: "container-nav",
           navFooter: [
             {
               text: "home",
@@ -98,6 +100,7 @@ export default {
         },
         {
           id: "3",
+          class: "container-social",
           navIcons: [
             {
               icons: require(`../assets/images/instagram.png`),
@@ -119,6 +122,7 @@ export default {
         },
         {
           id: "4",
+          class: "container-copyright",
           copyright: [
             {
               textCopyright: `Terms of use ${(
